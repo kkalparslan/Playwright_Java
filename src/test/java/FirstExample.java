@@ -7,24 +7,16 @@ public class FirstExample {
             try (Playwright playwright = Playwright.create()) {
                 BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions();
                 launchOptions.setHeadless(false);
+                //headless modu false diyerek headed mod istedim
                 Browser browser = playwright.chromium().launch(launchOptions);
                 Page page = browser.newPage();
                 page.navigate("https:www.hepsiburada.com");
                 page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example.png")));
+                //bu yola screenshot ları ekleyecek
                 browser.close();
             }
         }
     }
-      /**
 
-            BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions();
-            launchOptions.setHeadless(false); // headful modunu etkinleştirin
-
-            Browser browser = playwright.chromium().launch(launchOptions);
-            Page page = browser.newPage();
-            page.navigate("https://www.google.com");
-            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("example.png")));
-            browser.close();
-        }*/
 
 
