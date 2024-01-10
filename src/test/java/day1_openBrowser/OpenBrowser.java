@@ -1,8 +1,10 @@
+package day1_openBrowser;
+
 import com.microsoft.playwright.*;
 
 
 
-public class Day1_OpenBrowser {
+public class OpenBrowser {
 
         public static void main(String[] args) {
            /** try (Playwright playwright = Playwright.create()) {
