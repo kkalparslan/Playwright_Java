@@ -1,12 +1,13 @@
+package day2_openFullScreen;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 import java.awt.*;
-import java.lang.Thread;
 
-public class Day2_FullScreen {
+public class FullScreen {
 
     public static void main(String[] args) {
 
@@ -19,7 +20,7 @@ public class Day2_FullScreen {
         Page page = browser.newPage();
         page.navigate("https://b2c-tr.tiens.com/");
 
-        page.setViewportSize(width, height);
+        page.setViewportSize(width, height); //tam ekranı bu kod satırı ile yaptım.
 
         /**page.setViewportSize(1280, 720);
          try {
