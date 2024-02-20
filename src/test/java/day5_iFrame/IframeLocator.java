@@ -1,9 +1,7 @@
 package day5_iFrame;
 
 import com.microsoft.playwright.*;
-
 import java.awt.*;
-
 public class IframeLocator {
 
     public static void main(String[] args) throws InterruptedException {

@@ -2,8 +2,6 @@ package day5_iFrame;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.Frame;
-
-
 import java.awt.*;
 import java.util.List;
 
