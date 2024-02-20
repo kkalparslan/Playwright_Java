@@ -1,9 +1,8 @@
-package day_4_otherLocators;
+package day4_otherLocators;
 
 import com.microsoft.playwright.*;
 
 import java.awt.*;
-import java.util.Locale;
 
 public class OtherLocators {
 
