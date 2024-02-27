@@ -39,6 +39,9 @@ public class MultipleWindow {
             System.out.println("tab.title() = " + tab.title());
         });
 
+        /** yukarıda list e atadığım sayfaların url lerini farklı sayfalara atayarak pencereler
+         * arası geçiş yaptık. aşağıda da title larını kullanarak atama yapıp geçiş yaptık.
+
         System.out.println("pages.get(0).url() = " + pages.get(0).url());
         System.out.println("pages.get(1).url() = " + pages.get(1).url());
 
@@ -54,11 +57,21 @@ public class MultipleWindow {
         BrowserUtil.waitFor(3);
         firstPage.bringToFront();
         BrowserUtil.waitFor(2);
+         */
 
+        Page firstPage = null;
+        Page secondPage = null;
 
+        if(pages.get(0).title().equals("DEMOQA")){
+            firstPage = pages.get(0);
+        }else{
+            secondPage = pages.get(1);
+        }
 
+        BrowserUtil.waitFor(3);
+        firstPage.bringToFront();
+        BrowserUtil.waitFor(3);
 
-       // BrowserUtil.waitFor(3);
         page.close();
         browser.close();
         playwright.close();
