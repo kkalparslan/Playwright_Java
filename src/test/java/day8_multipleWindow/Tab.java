@@ -41,7 +41,6 @@ public class Tab {
         BrowserUtil.waitFor(3);
 
 
-
         page.close();
         browser.close();
         playwright.close();
