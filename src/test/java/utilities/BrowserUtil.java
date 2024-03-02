@@ -13,7 +13,4 @@ public class BrowserUtil {
             e.printStackTrace();
         }
     }
-
-
-
 }
