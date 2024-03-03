@@ -1,0 +1,20 @@
+* Test Generator kodlarımızı oluşturmada bize fayda sağlayacak bir özellik (inspector) diyebiliriz.
+Kodları üretirken bize otomatik olarak locatorları verir. Bu da testlerimizi yazmada büyük bir
+hız kazandırır.
+* Playwright ı java ile de kullanacak olsak test generator için bilgisayarda node.js (open source bir
+cross-platform JavaScript runtime ortamıdır) in yüklü olması gerekmektedir.
+
+** npm install playwright komutu playwright ı kurmamızı sağlar. ancak playwright ile chrome sürümü aynı
+(uygun) değilse terminalde bunu güncellememiz gerektiği uyarısı alırız. öyle bir durumla karşılaşırsak
+ilk kurulum için yazdığımız npm yerine npx yazarsak bu kod bizim chrome, firefox ve diğer tarayıcıları
+indirmemizi sağlar. sonrasında da kod generator ı başlatabilir duruma geliriz.
+
+* javascript yada type script için playwright ile bir projeye başlarken npx playwrigt latest komutu
+kullanıyorduk. aslında bu kod hem playwright ın en güncelini indirmemizi hem browser ları indirebilmemizi
+hem javascript/typescript tercihi yapabilmemizi hem de frameworkumuzu github ile paylaşmak istersek VC
+için okeylememizi sağlamış oluyor.
+
+* test generator ı başlatmak için ise; npx playwright codegen . kodunu terminalde yazmamız yeterlidir.
+* target kısmından istenilen dil seçilebilir.
+
+
