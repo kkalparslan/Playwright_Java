@@ -1,16 +1,13 @@
-package day7_actions;
+package d7_actions;
 
 import com.microsoft.playwright.*;
-import com.microsoft.playwright.options.SelectOption;
 import utilities.BrowserUtil;
 
 import java.awt.*;
-import java.util.Locale;
 
-public class DropDownMenu {
+public class MouseClick {
 
     public static void main(String[] args) {
-
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
@@ -19,23 +16,26 @@ public class DropDownMenu {
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         Page page = browser.newPage();
         page.setViewportSize(width, height);
-        page.navigate("https://www.ebay.com/");
+        page.navigate("https://demoqa.com/buttons");
 
-        /**
-         * elementin select tag i varsa value yada label optionlarına göre seçim yapabiliriz.
-         */
-
-        // select options
-        Locator selectCategory = page.getByLabel("Select a category for search");
+        // Generic click
+        Locator clickMe = page.getByText("Click Me").nth(2);
+        clickMe.click();
         BrowserUtil.waitFor(2);
 
-        // select by value
-        selectCategory.selectOption("625"); // Cameras & Photo
+        // Double click double click için dbclick() methodu uyguluyoruz.
+        Locator doubleClickMe = page.getByText("Double Click Me");
+        doubleClickMe.dblclick();
         BrowserUtil.waitFor(2);
 
-        // select by label
-        selectCategory.selectOption(new SelectOption().setLabel("Dolls & Bears"));
+        // Hover over element Hover over için hover() methodu uyguluyoruz.
+        page.getByText("Right Click Me").hover();
         BrowserUtil.waitFor(2);
+
+
+
+
+
 
 
         page.close();

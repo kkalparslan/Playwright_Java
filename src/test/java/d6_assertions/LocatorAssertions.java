@@ -1,4 +1,4 @@
-package day6_assertions;
+package d6_assertions;
 
 
 import com.microsoft.playwright.*;

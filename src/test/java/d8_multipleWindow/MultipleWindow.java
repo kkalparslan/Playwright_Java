@@ -1,4 +1,4 @@
-package day8_multipleWindow;
+package d8_multipleWindow;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;

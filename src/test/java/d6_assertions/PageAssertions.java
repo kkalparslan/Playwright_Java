@@ -1,16 +1,14 @@
-package day7_actions;
+package d6_assertions;
 
 import com.microsoft.playwright.*;
-import utilities.BrowserUtil;
 
 import java.awt.*;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class CheckBoxRadioButtons {
+public class PageAssertions {
 
     public static void main(String[] args) {
-
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
@@ -21,20 +19,18 @@ public class CheckBoxRadioButtons {
         page.setViewportSize(width, height);
         page.navigate("https://www.ebay.com/");
 
-        Locator registerButton = page.getByText("register").first();
-        registerButton.click();
+        // page assertions
 
-        // checkboxes and radio buttons
-        Locator businessAccount = page.getByText("Business account").first();
-       /** 1. yöntem
-        businessAccount.check();
-        assertThat(businessAccount).isChecked();
-        BrowserUtil.waitFor(3); */
+        // hasUrl
+        assertThat(page).hasURL("https://www.ebay.com/");
+        System.out.println("page.url() = " + page.url());
 
-        // 2. yöntem
-        businessAccount.setChecked(true);
-        assertThat(businessAccount).isChecked();
-        BrowserUtil.waitFor(2);
+        // hasTitle
+        assertThat(page).hasTitle("Electronics, Cars, Fashion, Collectibles & More | eBay");
+        System.out.println("page.title() = " + page.title());
+
+        // not()
+        assertThat(page).not().hasTitle("test");
 
 
         page.close();

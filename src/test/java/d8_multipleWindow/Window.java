@@ -1,4 +1,4 @@
-package day7_actions;
+package d8_multipleWindow;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
@@ -8,7 +8,8 @@ import utilities.BrowserUtil;
 
 import java.awt.*;
 
-public class DragAndDrop {
+public class Window {
+
     public static void main(String[] args) {
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) dimension.getWidth();
@@ -18,25 +19,18 @@ public class DragAndDrop {
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         Page page = browser.newPage();
         page.setViewportSize(width, height);
-        page.navigate("https://demoqa.com/droppable");
-
-        // drag and drop
-       // page.getByText("Drag me").first().dragTo(page.getByText("Drop here").first());
-       // BrowserUtil.waitFor(2);
-
-        /**
-         aşağıda önce sürükleyeceğimiz elemente hover yapıp mouse.down yaptık. sonra
-         drop yapacağımız elemente hover yapıp mouse.up yaparak bitirdik.yukarıda hazır method
-         aşağıda manuel uygulamış olduk.         */
-
-        // manually
-        page.getByText("Drag me").first().hover();
+        page.navigate("https://demoqa.com/browser-windows");
+        System.out.println("page.title() = " + page.title()); //DEMOQA
         BrowserUtil.waitFor(1);
-        page.mouse().down();
-        page.getByText("Drop here").first().hover();
+
+
+        // Get popup after a specific action (e.g., click)
+        Page popup = page.waitForPopup(() -> {
+            page.getByText("New Window").first().click();
+        });
+        popup.waitForLoadState();
+        System.out.println("popup.title() = " + popup.title()); //title olmadığı için boş döndü
         BrowserUtil.waitFor(1);
-        page.mouse().up();
-        BrowserUtil.waitFor(2);
 
 
         page.close();

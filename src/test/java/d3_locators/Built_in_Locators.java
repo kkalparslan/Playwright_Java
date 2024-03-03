@@ -1,7 +1,6 @@
-package day3_locators;
+package d3_locators;
 
 import com.microsoft.playwright.*;
-import com.microsoft.playwright.options.AriaRole;
 
 import java.awt.*;
 

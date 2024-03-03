@@ -1,13 +1,16 @@
-package day7_actions;
+package d7_actions;
 
 import com.microsoft.playwright.*;
 import utilities.BrowserUtil;
 
 import java.awt.*;
 
-public class MouseClick {
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
+public class CheckBoxRadioButtons {
 
     public static void main(String[] args) {
+
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
@@ -16,26 +19,22 @@ public class MouseClick {
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         Page page = browser.newPage();
         page.setViewportSize(width, height);
-        page.navigate("https://demoqa.com/buttons");
+        page.navigate("https://www.ebay.com/");
 
-        // Generic click
-        Locator clickMe = page.getByText("Click Me").nth(2);
-        clickMe.click();
+        Locator registerButton = page.getByText("register").first();
+        registerButton.click();
+
+        // checkboxes and radio buttons
+        Locator businessAccount = page.getByText("Business account").first();
+       /** 1. yöntem
+        businessAccount.check();
+        assertThat(businessAccount).isChecked();
+        BrowserUtil.waitFor(3); */
+
+        // 2. yöntem
+        businessAccount.setChecked(true);
+        assertThat(businessAccount).isChecked();
         BrowserUtil.waitFor(2);
-
-        // Double click double click için dbclick() methodu uyguluyoruz.
-        Locator doubleClickMe = page.getByText("Double Click Me");
-        doubleClickMe.dblclick();
-        BrowserUtil.waitFor(2);
-
-        // Hover over element Hover over için hover() methodu uyguluyoruz.
-        page.getByText("Right Click Me").hover();
-        BrowserUtil.waitFor(2);
-
-
-
-
-
 
 
         page.close();

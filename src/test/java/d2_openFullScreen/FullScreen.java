@@ -1,4 +1,4 @@
-package day2_openFullScreen;
+package d2_openFullScreen;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;

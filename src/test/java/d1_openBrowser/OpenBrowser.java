@@ -1,4 +1,4 @@
-package day1_openBrowser;
+package d1_openBrowser;
 
 import com.microsoft.playwright.*;
 

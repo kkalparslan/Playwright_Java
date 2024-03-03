@@ -1,4 +1,4 @@
-package day4_otherLocators;
+package d4_otherLocators;
 
 import com.microsoft.playwright.*;
 

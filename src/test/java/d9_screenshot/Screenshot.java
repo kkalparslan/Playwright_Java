@@ -1,4 +1,4 @@
-package day9_screenshot;
+package d9_screenshot;
 
 
 import com.microsoft.playwright.*;

@@ -1,4 +1,4 @@
-package day7_actions;
+package d7_actions;
 
 import com.microsoft.playwright.*;
 import utilities.BrowserUtil;

@@ -1,12 +1,13 @@
-package day7_actions;
+package d7_actions;
 
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.SelectOption;
 import utilities.BrowserUtil;
 
 import java.awt.*;
-import java.nio.file.Paths;
 
-public class UploadFile1 {
+public class DropDownMenu {
+
     public static void main(String[] args) {
 
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
@@ -17,21 +18,24 @@ public class UploadFile1 {
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         Page page = browser.newPage();
         page.setViewportSize(width, height);
-        page.navigate("https://the-internet.herokuapp.com/upload");
+        page.navigate("https://www.ebay.com/");
 
-        // select one file
         /**
-         bir elementin input tag i varsa öncelikle bu tag i olan locator ile başlanmalıdır. aksi takdirde
-         upload işlemi başarız olabilecektir.
+         * elementin select tag i varsa value yada label optionlarına göre seçim yapabiliriz.
          */
 
-        Locator dosyaSec = page.locator("#file-upload");
-        String filePath = System.getProperty("user.home")+"/IdeaProjects/Playwright_Java/src/test/java/utilities/files/ornek.txt";
+        // select options
+        Locator selectCategory = page.getByLabel("Select a category for search");
+        BrowserUtil.waitFor(2);
 
-        dosyaSec.setInputFiles(Paths.get(filePath));
-        page.locator("#file-submit").click();
+        // select by value
+        selectCategory.selectOption("625"); // Cameras & Photo
+        BrowserUtil.waitFor(2);
 
-        BrowserUtil.waitFor(3);
+        // select by label
+        selectCategory.selectOption(new SelectOption().setLabel("Dolls & Bears"));
+        BrowserUtil.waitFor(2);
+
 
         page.close();
         browser.close();
