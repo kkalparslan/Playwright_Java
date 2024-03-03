@@ -55,6 +55,4 @@ public class OtherLocators {
         playwright.close();
 
     }
-
-
 }
