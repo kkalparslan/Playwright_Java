@@ -50,7 +50,6 @@ public class Screenshot {
         page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(filePath))
                 .setMask(Arrays.asList(searchBox)));
 
-
         page.close();
         browser.close();
         playwright.close();

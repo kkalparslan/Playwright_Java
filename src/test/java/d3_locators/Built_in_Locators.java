@@ -51,7 +51,7 @@ public class Built_in_Locators {
         Locator phoneNumber = page.getByRole(TEXTBOX, new Page.GetByRoleOptions().setName("Telefon Numarası"));
         System.out.println("phone number: "+ phoneNumber.innerText());
         /**
-         * AriaRole.Textbox diye de konulabilir ilk role paranetresi, yukarıdaki gibi sadece TEXTBOX olarak da
+         * AriaRole.Textbox diye de konulabilir ilk role parametresi, yukarıdaki gibi sadece TEXTBOX olarak da
          * Aria role dışındaki locator larda da GetByRoleOptions() seçenekleri kullanılabilir.
          * Sadece buna özgü değil. Hatta 2 locator aynı anda da kullanılabilir.
          */
