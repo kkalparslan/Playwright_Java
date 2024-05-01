@@ -33,7 +33,6 @@ public class DownloadFile_2 {
         download.saveAs(Paths.get(filePath, download.suggestedFilename()));
         BrowserUtil.waitFor(1);
 
-
         page.close();
         browser.close();
         playwright.close();

@@ -19,10 +19,9 @@ public class DragAndDrop {
         Page page = browser.newPage();
         page.setViewportSize(width, height);
         page.navigate("https://demoqa.com/droppable");
-
         // drag and drop
-       // page.getByText("Drag me").first().dragTo(page.getByText("Drop here").first());
-       // BrowserUtil.waitFor(2);
+        // page.getByText("Drag me").first().dragTo(page.getByText("Drop here").first());
+        // BrowserUtil.waitFor(2);
 
         /**
          aşağıda önce sürükleyeceğimiz elemente hover yapıp mouse.down yaptık. sonra

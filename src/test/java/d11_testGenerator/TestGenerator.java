@@ -24,9 +24,6 @@ public class TestGenerator {
         System.out.println("page.title() = " + page.title()); //DEMOQA
         BrowserUtil.waitFor(1);
 
-
-
-
         page.close();
         browser.close();
         playwright.close();
