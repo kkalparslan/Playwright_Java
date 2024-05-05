@@ -31,7 +31,6 @@ public class UploadFile2 {
         uploadButton.click();
         BrowserUtil.waitFor(3);
 
-
         page.close();
         browser.close();
         playwright.close();

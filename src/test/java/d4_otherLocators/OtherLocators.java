@@ -53,6 +53,5 @@ public class OtherLocators {
         page.close();
         browser.close();
         playwright.close();
-
     }
 }

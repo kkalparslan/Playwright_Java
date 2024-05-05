@@ -50,7 +50,6 @@ public class LocatorAssertions {
         assertThat(register).isEnabled();
         System.out.println("register.isEnabled() = " + register.isEnabled());
 
-
         page.close();
         browser.close();
         playwright.close();
