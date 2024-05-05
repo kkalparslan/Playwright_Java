@@ -32,7 +32,6 @@ public class Window {
         System.out.println("popup.title() = " + popup.title()); //title olmadığı için boş döndü
         BrowserUtil.waitFor(1);
 
-
         page.close();
         browser.close();
         playwright.close();

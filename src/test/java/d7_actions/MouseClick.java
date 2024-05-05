@@ -32,12 +32,6 @@ public class MouseClick {
         page.getByText("Right Click Me").hover();
         BrowserUtil.waitFor(2);
 
-
-
-
-
-
-
         page.close();
         browser.close();
         playwright.close();

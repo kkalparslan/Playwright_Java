@@ -37,7 +37,6 @@ public class DragAndDrop {
         page.mouse().up();
         BrowserUtil.waitFor(2);
 
-
         page.close();
         browser.close();
         playwright.close();

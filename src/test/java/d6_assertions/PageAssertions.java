@@ -32,7 +32,6 @@ public class PageAssertions {
         // not()
         assertThat(page).not().hasTitle("test");
 
-
         page.close();
         browser.close();
         playwright.close();

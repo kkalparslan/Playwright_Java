@@ -36,7 +36,6 @@ public class DropDownMenu {
         selectCategory.selectOption(new SelectOption().setLabel("Dolls & Bears"));
         BrowserUtil.waitFor(2);
 
-
         page.close();
         browser.close();
         playwright.close();

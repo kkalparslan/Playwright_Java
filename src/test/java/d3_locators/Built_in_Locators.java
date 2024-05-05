@@ -20,9 +20,7 @@ public class Built_in_Locators {
         Page page = browser.newPage();
 
         page.navigate("http://www.getir.com");
-
         page.setViewportSize(width, height);
-
         System.out.println("title: "+ page.title());
         System.out.println("url: "+ page.url());
 
@@ -109,7 +107,6 @@ public class Built_in_Locators {
         Locator category4 = page.locator("sc-b6b4847f-7 > .sc-6df7862-1")
                 .filter(new Locator.FilterOptions().setHasText("Su & İçecek"));
         //category4.click();
-
 
         page.close();
         browser.close();

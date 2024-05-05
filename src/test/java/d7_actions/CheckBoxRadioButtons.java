@@ -36,7 +36,6 @@ public class CheckBoxRadioButtons {
         assertThat(businessAccount).isChecked();
         BrowserUtil.waitFor(2);
 
-
         page.close();
         browser.close();
         playwright.close();

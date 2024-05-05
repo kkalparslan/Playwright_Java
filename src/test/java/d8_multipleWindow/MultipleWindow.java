@@ -55,7 +55,6 @@ public class MultipleWindow {
         firstPage.bringToFront();
         BrowserUtil.waitFor(2);
 
-
        // BrowserUtil.waitFor(3);
         page.close();
         browser.close();

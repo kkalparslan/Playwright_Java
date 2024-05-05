@@ -19,7 +19,6 @@ public class IframeUrl {
         page.setViewportSize(width, height);
 
         page.navigate("https://the-internet.herokuapp.com/iframe");
-
         Locator title = page.locator("//h3");
         System.out.println("title = " + title.innerText());
 
@@ -51,7 +50,6 @@ public class IframeUrl {
         inputText.fill("hello world");
 
         Thread.sleep(2000);
-
         page.close();
         browser.close();
         playwright.close();
