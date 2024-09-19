@@ -27,7 +27,7 @@ public class DownloadFile_2 {
         });
 
         String filePath = System.getProperty("user.home")+"/Downloads/";
-        //burada sadece dosyanın yolunu verdik. isimlendirme veya format vermeye gerek yok
+        // burada sadece dosyanın yolu verildi. isimlendirme veya format vermeye gerek yok
 
         // Wait for the download process to complete and save the downloaded file somewhere
         download.saveAs(Paths.get(filePath, download.suggestedFilename()));
