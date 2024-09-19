@@ -33,7 +33,7 @@ public class DeleteFile {
         download.saveAs(Paths.get(filePath));
         BrowserUtil.waitFor(1);
 
-        //dosyanın indiğini assert edeceğiz
+        //dosyanın indiğini assert etme/ validate to the file downloaded
         boolean isFileDownloaded = Files.exists(Paths.get(filePath));
         assert isFileDownloaded; //==true olarak da assert edebiliriz ama bu haliyle basit yap diyor.
 
