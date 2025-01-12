@@ -16,7 +16,8 @@ public class FullScreen {
         int height = (int) dimension.getHeight();
 
         Playwright playwright = Playwright.create();
-        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+                .setHeadless(false));
         Page page = browser.newPage();
         page.navigate("https://b2c-tr.tiens.com/");
 
