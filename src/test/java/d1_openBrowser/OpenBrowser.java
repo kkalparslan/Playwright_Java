@@ -21,7 +21,7 @@ public class OpenBrowser {
 
                 /**
                  * testi try bloğunda çalıştırırsak page/browser ı otımatik olarak kapatıyor
-                 * ve testi bitiriyor. try bloğu kullanmaz isek pege/browser ve tümüyle testin
+                 * ve testi bitiriyor. try bloğu kullanmaz isek page/browser ve tümüyle testin
                  * kapanması için aşağıdaki gibi ayrı ayrı close() methodları kullandım.
                  */
                 Playwright playwright = Playwright.create();
