@@ -60,7 +60,7 @@ public class Keyboard {
             page.keyboard().press("ArrowLeft");
             BrowserUtil.waitFor(1);
         }
-       // for (int i = 0; i < " World".length(); i++)
+        // for (int i = 0; i < " World".length(); i++)
         //    page.keyboard().press("ArrowLeft");
         page.keyboard().up("Shift");
         page.keyboard().press("Backspace"); // Result text will end up saying "Hello!"

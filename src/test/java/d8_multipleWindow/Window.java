@@ -23,7 +23,6 @@ public class Window {
         System.out.println("page.title() = " + page.title()); //DEMOQA
         BrowserUtil.waitFor(1);
 
-
         // Get popup after a specific action (e.g., click)
         Page popup = page.waitForPopup(() -> {
             page.getByText("New Window").first().click();

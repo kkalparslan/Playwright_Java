@@ -26,7 +26,7 @@ public class Screenshot {
 
         // Sayfanın resmini alma
         String date = new SimpleDateFormat("_hh_mm_ss_ddMMyyy").format(new Date());
-        String filePath = "src/test/java/utilities/screenShots"+ date +".jpg"; //aldığımız ekran
+        String filePath = "src/test/java/utilities/screenShots" + date + ".jpg"; //aldığımız ekran
         //görüntülerini kaydetmek istediğimiz dosyanın yolu. utilities altında screenshot isimli
         //bir klasörün altında topladım.
 
