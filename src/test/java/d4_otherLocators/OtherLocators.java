@@ -30,7 +30,6 @@ public class OtherLocators {
         // burada daha katı/spesifik bir arama yapar. taxti sadece böyle ise getirir
         System.out.println("2. loginText2 = " + loginText2.innerText());
 
-
         // element matching one of the conditions
         Locator continueButton = page.locator("button:has-text('Telefon numarası ile devam et'), button:has-text('login button')");
         System.out.println("3. continueButton = " + continueButton.innerText());

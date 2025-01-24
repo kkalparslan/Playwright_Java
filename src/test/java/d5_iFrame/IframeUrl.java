@@ -2,6 +2,7 @@ package d5_iFrame;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.Frame;
+
 import java.awt.*;
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class IframeUrl {
         List<Frame> frames = page.frames();
         System.out.println("size = " + frames);
 
-        for(Frame frame: frames){
+        for (Frame frame : frames) {
             System.out.println("url= " + frame.url());
         }
 

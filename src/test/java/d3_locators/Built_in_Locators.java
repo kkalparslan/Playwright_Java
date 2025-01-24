@@ -9,7 +9,7 @@ import static com.microsoft.playwright.options.AriaRole.TEXTBOX;
 
 public class Built_in_Locators {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) dimension.getWidth();
@@ -21,8 +21,8 @@ public class Built_in_Locators {
 
         page.navigate("http://www.getir.com");
         page.setViewportSize(width, height);
-        System.out.println("title: "+ page.title());
-        System.out.println("url: "+ page.url());
+        System.out.println("title: " + page.title());
+        System.out.println("url: " + page.url());
 
         // getByText:
         Locator loginText = page.getByText("Giriş yap veya kayıt ol");
@@ -43,11 +43,11 @@ public class Built_in_Locators {
          */
         Locator shodowDom = page.locator("div", new Page.LocatorOptions()
                 .setHasText("Giriş yap veya kayıt ol")).last();
-        System.out.println("shodow dom: "+ shodowDom.innerText());
+        System.out.println("shodow dom: " + shodowDom.innerText());
 
         // getByRole:
         Locator phoneNumber = page.getByRole(TEXTBOX, new Page.GetByRoleOptions().setName("Telefon Numarası"));
-        System.out.println("phone number: "+ phoneNumber.innerText());
+        System.out.println("phone number: " + phoneNumber.innerText());
         /**
          * AriaRole.Textbox diye de konulabilir ilk role parametresi, yukarıdaki gibi sadece TEXTBOX olarak da
          * Aria role dışındaki locator larda da GetByRoleOptions() seçenekleri kullanılabilir.
@@ -55,7 +55,7 @@ public class Built_in_Locators {
          */
         phoneNumber.click();
         phoneNumber.fill("555-0-666");
-        System.out.println("1.phone number: "+phoneNumber.inputValue());
+        System.out.println("1.phone number: " + phoneNumber.inputValue());
 
         try {
             Thread.sleep(2000);
@@ -65,7 +65,7 @@ public class Built_in_Locators {
 
         //getByPlaceholder:
         Locator phoneNumber2 = page.getByPlaceholder("Telefon Numarası");
-        System.out.println("2. phone number: "+ phoneNumber2.innerText());
+        System.out.println("2. phone number: " + phoneNumber2.innerText());
 
         //getByLabel:
         Locator phoneContinueButton = page.getByLabel("login button");
@@ -83,7 +83,7 @@ public class Built_in_Locators {
          elementi bulduk. burada placeholder ile aldık.
          */
         Locator loginPhoneNumber = page.getByTestId("modal").getByPlaceholder("Telefon Numarası");
-        System.out.println("4. phone number: "+loginPhoneNumber.innerText());
+        System.out.println("4. phone number: " + loginPhoneNumber.innerText());
         loginPhoneNumber.click();
         loginPhoneNumber.fill("74647347");
 
@@ -98,7 +98,7 @@ public class Built_in_Locators {
 
         // getByTestId and filter options
         Locator category2 = page.getByTestId("text").filter(new Locator.FilterOptions().setHasText("Su & İçecek"));
-        System.out.println("5. category: "+category2.innerText());
+        System.out.println("5. category: " + category2.innerText());
 
         // css and filter options
         Locator category3 = page.locator("div").filter(new Locator.FilterOptions().setHasText("Su & İçecek"));
