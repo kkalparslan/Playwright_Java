@@ -3,7 +3,6 @@ package d1_openBrowser;
 import com.microsoft.playwright.*;
 
 
-
 public class OpenBrowser {
 
         public static void main(String[] args) {
