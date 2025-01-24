@@ -27,7 +27,7 @@ public class UploadFile3 {
         // uploadad single file with file chooser(without input tag)
 
         Locator selectFileButton = page.locator("a[id='pickfiles']");
-        String filePath = System.getProperty("user.home")+"/IdeaProjects/Playwright_Java/src/test/java/utilities/files/2.png";
+        String filePath = System.getProperty("user.home") + "/IdeaProjects/Playwright_Java/src/test/java/utilities/files/2.png";
         FileChooser fileChooser = page.waitForFileChooser(() -> {
             selectFileButton.click();
         });

@@ -22,10 +22,10 @@ public class UploadFile2 {
 
         // select multiple files
         Locator chooseFile = page.locator("input[id='input-4']");
-        String filePath1 = System.getProperty("user.home")+"/IdeaProjects/Playwright_Java/src/test/java/utilities/files/ornek.txt";
-        String filePath2 = System.getProperty("user.home")+ "/IdeaProjects/Playwright_Java/src/test/java/utilities/files/english course.docx";
+        String filePath1 = System.getProperty("user.home") + "/IdeaProjects/Playwright_Java/src/test/java/utilities/files/ornek.txt";
+        String filePath2 = System.getProperty("user.home") + "/IdeaProjects/Playwright_Java/src/test/java/utilities/files/english course.docx";
 
-        chooseFile.setInputFiles(new Path [] {Paths.get(filePath1), Paths.get(filePath2)});
+        chooseFile.setInputFiles(new Path[]{Paths.get(filePath1), Paths.get(filePath2)});
 
         Locator uploadButton = page.getByTitle("Upload selected files");
         uploadButton.click();

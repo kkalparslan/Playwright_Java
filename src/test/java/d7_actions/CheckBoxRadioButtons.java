@@ -26,10 +26,10 @@ public class CheckBoxRadioButtons {
 
         // checkboxes and radio buttons
         Locator businessAccount = page.getByText("Business account").first();
-       /** 1. yöntem
-        businessAccount.check();
-        assertThat(businessAccount).isChecked();
-        BrowserUtil.waitFor(3); */
+        /** 1. yöntem
+         businessAccount.check();
+         assertThat(businessAccount).isChecked();
+         BrowserUtil.waitFor(3); */
 
         // 2. yöntem
         businessAccount.setChecked(true);
