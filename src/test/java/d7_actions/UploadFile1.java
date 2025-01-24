@@ -26,7 +26,7 @@ public class UploadFile1 {
          */
 
         Locator dosyaSec = page.locator("#file-upload");
-        String filePath = System.getProperty("user.home")+"/IdeaProjects/Playwright_Java/src/test/java/utilities/files/ornek.txt";
+        String filePath = System.getProperty("user.home") + "/IdeaProjects/Playwright_Java/src/test/java/utilities/files/ornek.txt";
 
         dosyaSec.setInputFiles(Paths.get(filePath));
         page.locator("#file-submit").click();

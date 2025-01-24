@@ -2,6 +2,7 @@ package d7_actions;
 
 import com.microsoft.playwright.*;
 import utilities.BrowserUtil;
+
 import java.awt.*;
 
 public class TextInput {
@@ -23,12 +24,12 @@ public class TextInput {
         searchBox.fill("tiens");
 
         // Keys and shortcuts
-       // searchBox.press("Enter"); buradaki kod ile aşağıdaki satırdaki kod arasında işlev olarak
-                                 // herhangi fark yok
+        // searchBox.press("Enter"); buradaki kod ile aşağıdaki satırdaki kod arasında işlev olarak
+        // herhangi fark yok. Tercihe kalmış.
 
         page.keyboard().press("Enter");
         BrowserUtil.waitFor(3); // utilities BrowserUtil sınıfı oluşturdum. ihtiyaç duyduğum
-                                       // methodları yerleştirebilirim.
+        // methodları yerleştirebilirim.
 
         page.close();
         browser.close();
