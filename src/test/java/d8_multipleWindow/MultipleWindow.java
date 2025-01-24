@@ -27,14 +27,14 @@ public class MultipleWindow {
         // multiple window
         // Get popup after a specific action (e.g., click)
         Page popup = page.waitForPopup(new Page.WaitForPopupOptions().setPredicate(
-                p-> p.context().pages().size() == 2), ()->{
+                p -> p.context().pages().size() == 2), () -> {
             page.getByText("New Window").first().click();
         });
 
-        List <Page> pages = popup.context().pages();
+        List<Page> pages = popup.context().pages();
         System.out.println("pages.size() = " + pages.size());
 
-        pages.forEach(tab->{
+        pages.forEach(tab -> {
             tab.waitForLoadState();
             System.out.println("tab.title() = " + tab.title());
         });
@@ -45,9 +45,9 @@ public class MultipleWindow {
         Page firstPage = null;
         Page secondPage = null;
 
-        if(pages.get(0).url().equals("https://demoqa.com/browser-windows")){
+        if (pages.get(0).url().equals("https://demoqa.com/browser-windows")) {
             firstPage = pages.get(0);
-        }else {
+        } else {
             secondPage = pages.get(1);
         }
 
@@ -55,7 +55,7 @@ public class MultipleWindow {
         firstPage.bringToFront();
         BrowserUtil.waitFor(2);
 
-       // BrowserUtil.waitFor(3);
+        // BrowserUtil.waitFor(3);
         page.close();
         browser.close();
         playwright.close();

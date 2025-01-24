@@ -28,7 +28,7 @@ public class Tab {
 
         // Get page after a specific action (e.g. clicking a link)
         BrowserUtil.waitFor(1);
-        Page newPage = page.context().waitForPage(() ->{  //resmi sitede context.waitForPage olarak
+        Page newPage = page.context().waitForPage(() -> {  //resmi sitede context.waitForPage olarak
             //kullanılmış. gizli sekmede açmak için. bu da Browserdan geliyor
             page.getByText("Click Here").click(); //opens a new tab
         });
