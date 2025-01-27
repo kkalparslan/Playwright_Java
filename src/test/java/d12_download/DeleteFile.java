@@ -29,7 +29,7 @@ public class DeleteFile {
         });
 
         String date = new SimpleDateFormat("_hh_mm_ss_ddMMyyy").format(new Date());
-        String filePath = System.getProperty("user.home")+"/Downloads/"+date+"file.jpg";
+        String filePath = System.getProperty("user.home") + "/Downloads/" + date + "file.jpg";
         download.saveAs(Paths.get(filePath));
         BrowserUtil.waitFor(1);
 
@@ -44,7 +44,6 @@ public class DeleteFile {
         // kodu deniyoruz.
 
         Files.deleteIfExists(Paths.get(filePath)); //dosya silindi
-
 
         page.close();
         browser.close();
