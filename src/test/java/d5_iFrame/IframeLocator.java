@@ -46,7 +46,6 @@ public class IframeLocator {
          */
 
         Thread.sleep(2000);
-
         Locator elemantalSelenium = page.getByText("Elemental Selenium");
         System.out.println("elemantalSelenium = " + elemantalSelenium.innerText());
 
